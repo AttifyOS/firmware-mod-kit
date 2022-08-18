@@ -42,7 +42,7 @@ install() {
 
   echo "This package provides the following commands
     - extract-firmware.sh
-    - build.firmware.sh"
+    - build-firmware.sh"
 }
 
 uninstall() {
