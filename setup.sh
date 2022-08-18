@@ -33,11 +33,11 @@ install() {
   rm $APM_TMP_DIR/fmk_0.99-8403a17_amd64.snap
 
   echo "#!/usr/bin/env sh" > $APM_PKG_BIN_DIR/extract-firmware.sh
-  echo "sudo fmk.extract-firmware" >> $APM_PKG_BIN_DIR/extract-firmware.sh
+  echo 'sudo fmk.extract-firmware "$@"' >> $APM_PKG_BIN_DIR/extract-firmware.sh
   chmod +x $APM_PKG_BIN_DIR/extract-firmware.sh
 
   echo "#!/usr/bin/env sh" > $APM_PKG_BIN_DIR/build-firmware.sh
-  echo "sudo fmk.build-firmware.sh" >> $APM_PKG_BIN_DIR/build-firmware.sh
+  echo 'sudo fmk.build-firmware "$@"' >> $APM_PKG_BIN_DIR/build-firmware.sh
   chmod +x $APM_PKG_BIN_DIR/build-firmware.sh
 
   echo "This package provides the following commands
