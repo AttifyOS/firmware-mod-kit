@@ -29,7 +29,7 @@ check_env() {
 
 install() {
   wget https://github.com/AttifyOS/firmware-mod-kit/releases/download/v0.99-8403a17/fmk_0.99-8403a17_amd64.snap -O $APM_TMP_DIR/fmk_0.99-8403a17_amd64.snap
-  sudo snap install $APM_TMP_DIR/nmap_7.92_amd64.snap --devmode
+  sudo snap install $APM_TMP_DIR/fmk_0.99-8403a17_amd64.snap --devmode
   rm $APM_TMP_DIR/fmk_0.99-8403a17_amd64.snap
 
   echo "#!/usr/bin/env sh" > $APM_PKG_BIN_DIR/extract-firmware.sh
